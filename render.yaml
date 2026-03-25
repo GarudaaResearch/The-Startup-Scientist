@@ -1,0 +1,15 @@
+{
+  "version": "1",
+  "name": "startup-scientist-portal",
+  "type": "static",
+  "staticPublishDir": ".",
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ],
+  "env": {
+    "NODE_VERSION": "18"
+  }
+}

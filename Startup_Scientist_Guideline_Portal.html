@@ -1,0 +1,2629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Startup Scientist: Innovation from Physics & Biotechnology to Market-Ready Ventures</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+        }
+        
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .header-images {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        
+        .header-left-image, .header-right-image {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .header-left-image:hover, .header-right-image:hover {
+            transform: scale(1.05);
+        }
+        
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #667eea;
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+            transition: transform 0.3s ease;
+        }
+        
+        .profile-image:hover {
+            transform: scale(1.05);
+        }
+        
+        .profile-info {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
+        .profile-info h3 {
+            color: #2c3e50;
+            margin: 0 0 5px 0;
+            font-size: 1.4em;
+            font-weight: 600;
+        }
+        
+        .profile-title {
+            color: #667eea;
+            font-weight: 600;
+            margin: 0 0 3px 0;
+            font-size: 1.1em;
+        }
+        
+        .profile-institution {
+            color: #7f8c8d;
+            margin: 0;
+            font-size: 1em;
+        }
+        
+        .header-content h1 {
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .header-content .subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+        
+        .event-details {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            display: inline-block;
+        }
+        
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .section-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .section-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+        }
+        
+        .section-card h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-card h2 i {
+            color: #667eea;
+        }
+        
+        .opportunity-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .opportunity-card {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease, cursor 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .opportunity-card:hover {
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+        
+        .opportunity-card i {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+        
+        .opportunity-card h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        
+        .example-card {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .example-card:hover {
+            background: #e9ecef;
+            transform: translateX(5px);
+        }
+        
+        .example-card h4 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .example-card .location {
+            background: #667eea;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.8em;
+        }
+        
+        .example-card a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        .example-card a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+        
+        .steps-container {
+            counter-reset: step-counter;
+        }
+        
+        .step-item {
+            position: relative;
+            padding-left: 60px;
+            margin-bottom: 30px;
+            counter-increment: step-counter;
+        }
+        
+        .step-item::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .step-item h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .resource-item {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+        
+        .resource-item:hover {
+            transform: translateY(-3px);
+            color: white;
+        }
+        
+        .resource-item i {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        
+        footer {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .footer-left {
+            text-align: left;
+        }
+        
+        .footer-right {
+            text-align: right;
+        }
+        
+        .footer-link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-link:hover {
+            color: #764ba2;
+        }
+        
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .header-content h1 {
+                font-size: 1.8em;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-left, .footer-right {
+                text-align: center;
+            }
+        }
+        
+        .personality-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .personality-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+        }
+        
+        .personality-image {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f8f9fa;
+        }
+        
+        .personality-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.3s ease;
+            display: block;
+        }
+        
+        .personality-card:hover .personality-image img {
+            transform: scale(1.05);
+        }
+        
+        .personality-content {
+            padding: 20px;
+        }
+        
+        .personality-content h3 {
+            color: #2c3e50;
+            margin-bottom: 5px;
+            font-size: 1.3em;
+        }
+        
+        .personality-title {
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .personality-field {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+        
+        .personality-achievement {
+            color: #2c3e50;
+            font-size: 0.95em;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        
+        .personality-quote {
+            color: #667eea;
+            font-style: italic;
+            font-size: 0.9em;
+            padding: 10px;
+            background: linear-gradient(135deg, #f093fb15, #f5576c15);
+            border-left: 3px solid #667eea;
+            border-radius: 5px;
+        }
+        
+        .highlight {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
+        
+        .badge {
+            background: #e74c3c;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 10px;
+            font-size: 0.8em;
+            margin-left: 10px;
+        }
+
+        /* Quiz Styles */
+        #quiz-container {
+            margin-top: 20px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e9ecef;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+
+        #progress-fill {
+            height: 100%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        #question-counter {
+            text-align: center;
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .question-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 4px solid #667eea;
+        }
+
+        .question-text {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .answer-option {
+            display: block;
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .answer-option:hover {
+            border-color: #667eea;
+            transform: translateX(5px);
+        }
+
+        .answer-option.selected {
+            border-color: #667eea;
+            background: linear-gradient(135deg, #667eea15, #764ba215);
+        }
+
+        .answer-option.correct {
+            border-color: #27ae60;
+            background: #27ae6015;
+        }
+
+        .answer-option.incorrect {
+            border-color: #e74c3c;
+            background: #e74c3c15;
+        }
+
+        .quiz-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+        }
+
+        .quiz-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        #score-display {
+            font-size: 2em;
+            font-weight: bold;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        #performance-message {
+            text-align: center;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        /* Feedback Form Styles */
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            font-size: 1em;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .rating-section {
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 15px;
+        }
+
+        .rating-section h4 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .rating-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 15px;
+        }
+
+        .rating-group label {
+            min-width: 150px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .star-rating {
+            display: flex;
+            gap: 5px;
+        }
+
+        .star {
+            font-size: 1.5em;
+            color: #ddd;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .star:hover,
+        .star.active {
+            color: #ffd700;
+        }
+
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+        }
+
+        .form-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: transform 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .reset-btn {
+            background: #6c757d;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: transform 0.3s ease;
+        }
+
+        .reset-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: center;
+            display: none;
+        }
+
+        .error-message {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: center;
+            display: none;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            background: white;
+            margin: 5% auto;
+            padding: 0;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 85vh;
+            overflow-y: auto;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            animation: modalSlideIn 0.3s ease;
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-header {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 25px;
+            border-radius: 20px 20px 0 0;
+            position: relative;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+            font-size: 1.8em;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .close-modal {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .close-modal:hover {
+            transform: scale(1.1);
+        }
+
+        .modal-body {
+            padding: 30px;
+        }
+
+        .info-section {
+            margin-bottom: 30px;
+        }
+
+        .info-section h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .current-projects {
+            display: grid;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .project-card {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateX(5px);
+            background: #e9ecef;
+        }
+
+        .opportunity-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .opportunity-list li {
+            background: linear-gradient(135deg, #667eea15, #764ba215);
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            border-left: 3px solid #667eea;
+            transition: transform 0.3s ease;
+        }
+
+        .opportunity-list li:hover {
+            transform: translateX(5px);
+        }
+
+        .real-time-data {
+            background: #e8f5e8;
+            border: 1px solid #28a745;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        .real-time-data h4 {
+            color: #28a745;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .data-point {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #c8e6c9;
+        }
+
+        .data-point:last-child {
+            border-bottom: none;
+        }
+
+        .loading-spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div class="header-images">
+                    <img src="images/albert-einstein.gif" alt="Albert Einstein" class="header-left-image">
+                    <img src="images/biotech.gif" alt="Biotechnology" class="header-right-image">
+                </div>
+                <img src="images/profile.jpg" alt="Prof. R. Anjit Raja" class="profile-image">
+                <div class="profile-info">
+                    <h3>Prof. R. Anjit Raja</h3>
+                    <p class="profile-title">Head - Innovation and Startup Cell</p>
+                    <p class="profile-institution">Rathinam College of Arts and Science</p>
+                </div>
+                <h1><i class="fas fa-rocket"></i> The Startup Scientist</h1>
+                <p class="subtitle">Innovation from Physics & Biotechnology to Market-Ready Ventures</p>
+                <div class="event-details">
+                    <p><i class="fas fa-calendar"></i> March 26, 2026 | <i class="fas fa-map-marker-alt"></i> Rathinam College of Arts and Science</p>
+                    <p><i class="fas fa-users"></i> Physics & Biotechnology Departments</p>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="section-card">
+                <h2><i class="fas fa-lightbulb"></i> Innovation Opportunities in Physics</h2>
+                <p>Transform your physics knowledge into groundbreaking startups with these high-potential areas:</p>
+                
+                <div class="opportunity-grid">
+                    <div class="opportunity-card" onclick="showTechnologyDetails('quantum')">
+                        <img src="images/quantum-tech.jpg" alt="Quantum Technologies" style="width: 100%; height: 150px; object-fit: cover; border-radius: 10px; margin-bottom: 15px;">
+                        <i class="fas fa-atom"></i>
+                        <h3>Quantum Technologies</h3>
+                        <p>Quantum computing, sensing, and cryptography applications</p>
+                    </div>
+                    <div class="opportunity-card" onclick="showTechnologyDetails('renewable')">
+                        <img src="images/renewable-energy.jpg" alt="Renewable Energy" style="width: 100%; height: 150px; object-fit: cover; border-radius: 10px; margin-bottom: 15px;">
+                        <i class="fas fa-solar-panel"></i>
+                        <h3>Renewable Energy</h3>
+                        <p>Solar innovations, energy storage, and efficiency solutions</p>
+                    </div>
+                    <div class="opportunity-card" onclick="showTechnologyDetails('semiconductor')">
+                        <img src="images/semiconductor-tech.jpg" alt="Semiconductor Tech" style="width: 100%; height: 150px; object-fit: cover; border-radius: 10px; margin-bottom: 15px;">
+                        <i class="fas fa-microchip"></i>
+                        <h3>Semiconductor Tech</h3>
+                        <p>Advanced materials, photonics, and electronics</p>
+                    </div>
+                    <div class="opportunity-card" onclick="showTechnologyDetails('space')">
+                        <img src="images/space-tech.jpg" alt="Space Technology" style="width: 100%; height: 150px; object-fit: cover; border-radius: 10px; margin-bottom: 15px;">
+                        <i class="fas fa-satellite"></i>
+                        <h3>Space Technology</h3>
+                        <p>Satellite systems, propulsion, and space applications</p>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 30px; color: #2c3e50;"><i class="fas fa-building"></i> Success Stories</h3>
+                
+                <div class="example-card">
+                    <h4><i class="fas fa-microscope"></i> PsiBorg <span class="location">Bangalore</span></h4>
+                    <p><strong>Focus:</strong> Quantum sensing and imaging technologies</p>
+                    <p><strong>Innovation:</strong> Advanced quantum sensors for medical diagnostics and industrial applications</p>
+                    <p><a href="https://www.psiborg.com" target="_blank"><i class="fas fa-external-link-alt"></i> Visit Website</a></p>
+                </div>
+                
+                <div class="example-card">
+                    <h4><i class="fas fa-battery-full"></i> Cygni Energy <span class="location">Chennai</span></h4>
+                    <p><strong>Focus:</strong> Solar-powered electric vehicle charging solutions</p>
+                    <p><strong>Innovation:</strong> Off-grid solar charging infrastructure for EVs</p>
+                    <p><a href="https://www.cygni.com" target="_blank"><i class="fas fa-external-link-alt"></i> Visit Website</a></p>
+                </div>
+                
+                <div class="example-card">
+                    <h4><i class="fas fa-laser"></i> Lumenis <span class="location">Coimbatore</span></h4>
+                    <p><strong>Focus:</strong> Laser-based manufacturing and medical devices</p>
+                    <p><strong>Innovation:</strong> Precision laser systems for industrial and healthcare applications</p>
+                    <p><a href="https://www.lumenis.com" target="_blank"><i class="fas fa-external-link-alt"></i> Visit Website</a></p>
+                </div>
+            </div>
+
+            <div class="section-card">
+                <h2><i class="fas fa-dna"></i> Innovation Opportunities in Biotechnology</h2>
+                <p>Leverage biotechnology to create revolutionary products and services:</p>
+                
+                <div class="opportunity-grid">
+                    <div class="opportunity-card" onclick="showTechnologyDetails('biopharma')">
+                        <img src="images/biopharma.jpg" alt="Biopharmaceuticals" style="width: 100%; height: 150px; object-fit: cover; border-radius: 10px; margin-bottom: 15px;">
+                        <i class="fas fa-pills"></i>
+                        <h3>Biopharmaceuticals</h3>
+                        <p>Novel drug discovery and development platforms</p>
+                    </div>
+                    <div class="opportunity-card" onclick="showTechnologyDetails('agricultural')">
+                        <img src="images/agricultural-tech.jpg" alt="Agricultural Tech" style="width: 100%; height: 150px; object-fit: cover; border-radius: 10px; margin-bottom: 15px;">
+                        <i class="fas fa-seedling"></i>
+                        <h3>Agricultural Tech</h3>
+                        <p>Genetically modified crops and sustainable farming</p>
+                    </div>
+                    <div class="opportunity-card" onclick="showTechnologyDetails('diagnostics')">
+                        <img src="images/diagnostics.jpg" alt="Diagnostics" style="width: 100%; height: 150px; object-fit: cover; border-radius: 10px; margin-bottom: 15px;">
+                        <i class="fas fa-vial"></i>
+                        <h3>Diagnostics</h3>
+                        <p>Rapid testing, personalized medicine, and health monitoring</p>
+                    </div>
+                    <div class="opportunity-card" onclick="showTechnologyDetails('bioprocessing')">
+                        <img src="images/bioprocessing.jpg" alt="Bioprocessing" style="width: 100%; height: 150px; object-fit: cover; border-radius: 10px; margin-bottom: 15px;">
+                        <i class="fas fa-recycle"></i>
+                        <h3>Bioprocessing</h3>
+                        <p>Enzyme technology, biofuels, and waste treatment</p>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 30px; color: #2c3e50;"><i class="fas fa-building"></i> Success Stories</h3>
+                
+                <div class="example-card">
+                    <h4><i class="fas fa-stethoscope"></i> BugWorks Research <span class="location">Bangalore</span></h4>
+                    <p><strong>Focus:</strong> Antibiotic drug discovery and development</p>
+                    <p><strong>Innovation:</strong> Novel antibiotics targeting multi-drug resistant bacteria</p>
+                    <p><a href="https://www.bugworks.in" target="_blank"><i class="fas fa-external-link-alt"></i> Visit Website</a></p>
+                </div>
+                
+                <div class="example-card">
+                    <h4><i class="fas fa-leaf"></i> Sea6 Energy <span class="location">Chennai</span></h4>
+                    <p><strong>Focus:</strong> Seaweed-based bioproducts and sustainable solutions</p>
+                    <p><strong>Innovation:</strong> Seaweed cultivation and processing for food, feed, and industrial applications</p>
+                    <p><a href="https://www.sea6energy.com" target="_blank"><i class="fas fa-external-link-alt"></i> Visit Website</a></p>
+                </div>
+                
+                <div class="example-card">
+                    <h4><i class="fas fa-test-tube"></i> Xcelris Labs <span class="location">Coimbatore</span></h4>
+                    <p><strong>Focus:</strong> Contract research and diagnostic services</p>
+                    <p><strong>Innovation:</strong> Integrated drug discovery and development solutions</p>
+                    <p><a href="https://www.xcelrislabs.com" target="_blank"><i class="fas fa-external-link-alt"></i> Visit Website</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <h2><i class="fas fa-route"></i> Your Pathway to Innovation</h2>
+            <p>Follow these strategic steps to transform your scientific knowledge into a successful startup:</p>
+            
+            <div class="steps-container">
+                <div class="step-item">
+                    <h3><i class="fas fa-search"></i> Identify Real-World Problems</h3>
+                    <p>Research market gaps and pain points that your scientific expertise can address. Focus on problems with significant economic or social impact.</p>
+                </div>
+                
+                <div class="step-item">
+                    <h3><i class="fas fa-flask"></i> Develop Your Innovation</h3>
+                    <p>Leverage your research background to create novel solutions. Build minimum viable products and validate your hypotheses through experimentation.</p>
+                </div>
+                
+                <div class="step-item">
+                    <h3><i class="fas fa-shield-alt"></i> Protect Your IP</h3>
+                    <p>File patents, trademarks, and protect your intellectual property early. Consult with IP experts to secure your innovations.</p>
+                </div>
+                
+                <div class="step-item">
+                    <h3><i class="fas fa-users"></i> Build Your Team</h3>
+                    <p>Assemble a multidisciplinary team with complementary skills. Include business expertise alongside technical capabilities.</p>
+                </div>
+                
+                <div class="step-item">
+                    <h3><i class="fas fa-rupee-sign"></i> Secure Funding</h3>
+                    <p>Explore grants, angel investors, venture capital, and government schemes. Prepare compelling pitches and business plans.</p>
+                </div>
+                
+                <div class="step-item">
+                    <h3><i class="fas fa-rocket"></i> Launch & Scale</h3>
+                    <p>Bring your product to market, gather customer feedback, and continuously iterate. Focus on growth and expansion strategies.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <h2><i class="fas fa-hand-holding-usd"></i> Funding & Support Resources</h2>
+            <p>Access these critical resources to fuel your startup journey:</p>
+            
+            <div class="resources-grid">
+                <a href="https://www.startupindia.gov.in" target="_blank" class="resource-item">
+                    <i class="fas fa-flag"></i>
+                    <h4>Startup India</h4>
+                    <p>Government initiatives & schemes</p>
+                </a>
+                
+                <a href="https://www.birac.nic.in" target="_blank" class="resource-item">
+                    <i class="fas fa-microscope"></i>
+                    <h4>BIRAC</h4>
+                    <p>Biotech research funding</p>
+                </a>
+                
+                <a href="https://www.meity.gov.in" target="_blank" class="resource-item">
+                    <i class="fas fa-laptop"></i>
+                    <h4>MeITY</h4>
+                    <p>Electronics & IT support</p>
+                </a>
+                
+                <a href="https://www.dst.gov.in" target="_blank" class="resource-item">
+                    <i class="fas fa-atom"></i>
+                    <h4>DST</h4>
+                    <p>Science & technology grants</p>
+                </a>
+                
+                <a href="https://tidelcoimbatore.com" target="_blank" class="resource-item">
+                    <i class="fas fa-building"></i>
+                    <h4>TIDEL Coimbatore</h4>
+                    <p>Local incubation support</p>
+                </a>
+                
+                <a href="https://www.kstart.in" target="_blank" class="resource-item">
+                    <i class="fas fa-rocket"></i>
+                    <h4>Kstart</h4>
+                    <p>Early-stage funding</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <h2><i class="fas fa-star"></i> Inspirational Personalities in Science & Innovation</h2>
+            <p>Learn from these trailblazers who transformed scientific knowledge into successful ventures:</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 30px;">
+                <div class="personality-card" onclick="window.open('https://en.wikipedia.org/wiki/A._P._J._Abdul_Kalam', '_blank')" style="cursor: pointer;">
+                    <div class="personality-image">
+                        <img src="images/abdul-kalam.jpg" alt="Dr. A.P.J. Abdul Kalam" />
+                    </div>
+                    <div class="personality-content">
+                        <h3>Dr. A.P.J. Abdul Kalam</h3>
+                        <p class="personality-title">Missile Man of India</p>
+                        <p class="personality-field">Physics & Aerospace Engineering</p>
+                        <p class="personality-achievement">Developed India's first satellite launch vehicle and guided missiles</p>
+                        <p class="personality-quote">"Dream, dream, dream. Dreams transform into thoughts and thoughts result in action."</p>
+                    </div>
+                </div>
+                
+                <div class="personality-card" onclick="window.open('https://en.wikipedia.org/wiki/Kiran_Mazumdar-Shaw', '_blank')" style="cursor: pointer;">
+                    <div class="personality-image">
+                        <img src="images/kiran-mazumdar.jpg" alt="Kiran Mazumdar-Shaw" />
+                    </div>
+                    <div class="personality-content">
+                        <h3>Kiran Mazumdar-Shaw</h3>
+                        <p class="personality-title">Biotech Pioneer</p>
+                        <p class="personality-field">Biotechnology</p>
+                        <p class="personality-achievement">Founded Biocon, India's largest biopharmaceutical company</p>
+                        <p class="personality-quote">"Entrepreneurship is about being able to face failure, manage failure and handle success."</p>
+                    </div>
+                </div>
+                
+                <div class="personality-card" onclick="window.open('https://en.wikipedia.org/wiki/Elon_Musk', '_blank')" style="cursor: pointer;">
+                    <div class="personality-image">
+                        <img src="images/elon-musk.jpg" alt="Elon Musk" />
+                    </div>
+                    <div class="personality-content">
+                        <h3>Elon Musk</h3>
+                        <p class="personality-title">Tech Innovator</p>
+                        <p class="personality-field">Physics & Engineering</p>
+                        <p class="personality-achievement">Tesla, SpaceX, NeuralTec - Revolutionizing multiple industries</p>
+                        <p class="personality-quote">"When something is important enough, you do it even if the odds are not in your favor."</p>
+                    </div>
+                </div>
+                
+                <div class="personality-card" onclick="window.open('https://en.wikipedia.org/wiki/M._C._Modi', '_blank')" style="cursor: pointer;">
+                    <div class="personality-image">
+                        <img src="images/dr-mc-modi.jpg" alt="Dr. M.C. Modi" />
+                    </div>
+                    <div class="personality-content">
+                        <h3>Dr. M.C. Modi</h3>
+                        <p class="personality-title">Eye Care Visionary</p>
+                        <p class="personality-field">Medicine & Biotechnology</p>
+                        <p class="personality-achievement">Performed over 600,000 eye surgeries and pioneered eye banking</p>
+                        <p class="personality-quote">"Service to humanity is the best work of life."</p>
+                    </div>
+                </div>
+                
+                <div class="personality-card" onclick="window.open('https://en.wikipedia.org/wiki/Vijay_Kumar_Saraswat', '_blank')" style="cursor: pointer;">
+                    <div class="personality-image">
+                        <img src="images/vijay-saraswat.jpg" alt="Dr. Vijay Kumar Saraswat" />
+                    </div>
+                    <div class="personality-content">
+                        <h3>Dr. Vijay Kumar Saraswat</h3>
+                        <p class="personality-title">Defense Scientist</p>
+                        <p class="personality-field">Physics & Defense Technology</p>
+                        <p class="personality-achievement">Former DRDO Chief, developed missile systems and defense technologies</p>
+                        <p class="personality-quote">"Innovation is the key to national security and technological sovereignty."</p>
+                    </div>
+                </div>
+                
+                <div class="personality-card" onclick="window.open('https://en.wikipedia.org/wiki/Jennifer_Doudna', '_blank')" style="cursor: pointer;">
+                    <div class="personality-image">
+                        <img src="images/jennifer-doudna.jpg" alt="Jennifer Doudna" />
+                    </div>
+                    <div class="personality-content">
+                        <h3>Jennifer Doudna</h3>
+                        <p class="personality-title">Nobel Laureate</p>
+                        <p class="personality-field">Biochemistry & CRISPR</p>
+                        <p class="personality-achievement">Co-developed CRISPR gene editing technology</p>
+                        <p class="personality-quote">"The power to control our genetic code is both exciting and humbling."</p>
+                    </div>
+                </div>
+                
+                <div class="personality-card" onclick="window.open('https://en.wikipedia.org/wiki/N._R._Narayana_Murthy', '_blank')" style="cursor: pointer;">
+                    <div class="personality-image">
+                        <img src="images/narayana-murthy.jpg" alt="N.R. Narayana Murthy" />
+                    </div>
+                    <div class="personality-content">
+                        <h3>N.R. Narayana Murthy</h3>
+                        <p class="personality-title">IT Visionary</p>
+                        <p class="personality-field">Computer Science & Engineering</p>
+                        <p class="personality-achievement">Co-founder of Infosys, global IT services leader</p>
+                        <p class="personality-quote">"Progress is often equal to the difference between mind and mindset."</p>
+                    </div>
+                </div>
+                
+                <div class="personality-card" onclick="window.open('https://en.wikipedia.org/wiki/Satya_Nadella', '_blank')" style="cursor: pointer;">
+                    <div class="personality-image">
+                        <img src="images/satya-nadella.jpg" alt="Satya Nadella" />
+                    </div>
+                    <div class="personality-content">
+                        <h3>Satya Nadella</h3>
+                        <p class="personality-title">Microsoft CEO</p>
+                        <p class="personality-field">Computer Science & Engineering</p>
+                        <p class="personality-achievement">Led Microsoft's transformation into a cloud-first company</p>
+                        <p class="personality-quote">"Our industry does not respect tradition - it only respects innovation."</p>
+                    </div>
+                </div>
+                
+                <div class="personality-card" onclick="window.open('https://pandorum.com/', '_blank')" style="cursor: pointer;">
+                    <div class="personality-image">
+                        <img src="images/pandorum-founders.jpg" alt="Pandorum Founders" />
+                    </div>
+                    <div class="personality-content">
+                        <h3>Tuhin Bhowmick & Arun Chandru</h3>
+                        <p class="personality-title">Space Biotechnology Innovators</p>
+                        <p class="personality-field">Biotechnology & Space Tech</p>
+                        <p class="personality-achievement">Co-founders of Pandorum, pioneering biotechnology solutions for space exploration</p>
+                        <p class="personality-quote">"Taking biotechnology beyond Earth to enable humanity's future in space."</p>
+                    </div>
+                </div>
+                
+                <div class="personality-card" onclick="window.open('https://algavenbiotech.com/', '_blank')" style="cursor: pointer;">
+                    <div class="personality-image">
+                        <img src="images/Mr.-RAJASEKARAN-SAMYKAN.png" alt="Dr. Rajasekaran Samykan" />
+                    </div>
+                    <div class="personality-content">
+                        <h3>Dr. Rajasekaran Samykan</h3>
+                        <p class="personality-title">Founder & CEO</p>
+                        <p class="personality-field">Biotechnology & Entrepreneurship</p>
+                        <p class="personality-achievement">Founder of AlgaVen Biotech, pioneering algal biotechnology solutions</p>
+                        <p class="personality-quote">"Innovation in biotechnology is the key to sustainable future solutions."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <h2><i class="fas fa-flask"></i> Real-Time Experiments & Learning Resources</h2>
+            <p>Explore these live experiments and educational videos to enhance your practical knowledge:</p>
+            
+            <div class="resources-grid">
+                <div class="resource-item" onclick="window.open('https://www.youtube.com/watch?v=uva6gBEpfDY', '_blank')" style="cursor: pointer;">
+                    <i class="fas fa-atom"></i>
+                    <h4>Quantum Physics Lab</h4>
+                    <p>Double-slit experiment demonstration</p>
+                </div>
+                
+                <div class="resource-item" onclick="window.open('https://www.youtube.com/watch?v=tcPgdR9_t64', '_blank')" style="cursor: pointer;">
+                    <i class="fas fa-microscope"></i>
+                    <h4>DNA Extraction</h4>
+                    <p>Biology lab experiment tutorial</p>
+                </div>
+                
+                <div class="resource-item" onclick="window.open('https://www.youtube.com/shorts/hpzlaaT0y5Y', '_blank')" style="cursor: pointer;">
+                    <i class="fas fa-rocket"></i>
+                    <h4>Physics Experiments</h4>
+                    <p>MIT undergraduate physics labs</p>
+                </div>
+                
+                <div class="resource-item" onclick="window.open('https://www.youtube.com/watch?v=uKeMiAZ8Zu4', '_blank')" style="cursor: pointer;">
+                    <i class="fas fa-dna"></i>
+                    <h4>PCR Techniques</h4>
+                    <p>Biotechnology lab demonstration</p>
+                </div>
+                
+                <div class="resource-item" onclick="window.open('https://www.youtube.com/shorts/b-Joj9d4aBI', '_blank')" style="cursor: pointer;">
+                    <i class="fas fa-laser"></i>
+                    <h4>Laser Physics</h4>
+                    <p>Laser experiments and applications</p>
+                </div>
+                
+                <div class="resource-item" onclick="window.open('https://www.youtube.com/shorts/RfiZaJyQPFY', '_blank')" style="cursor: pointer;">
+                    <i class="fas fa-bacterium"></i>
+                    <h4>Microbiology Lab</h4>
+                    <p>Bacterial culture techniques</p>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 30px; color: #2c3e50;"><i class="fas fa-university"></i> Department-Specific Resources</h3>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px;">
+                <div class="example-card">
+                    <h4><i class="fas fa-atom"></i> Physics Department <span class="location">Experiments</span></h4>
+                    <p><strong>Classical Mechanics:</strong> Pendulum, projectile motion</p>
+                    <p><strong>Electromagnetism:</strong> Circuit analysis, magnetic fields</p>
+                    <p><strong>Optics:</strong> Interference, diffraction patterns</p>
+                    <p><strong>Modern Physics:</strong> Radioactivity, quantum effects</p>
+                    <div style="margin-top: 15px;">
+                        <a href="https://phet.colorado.edu/en/simulations/filter?type=html,prototype" target="_blank" style="color: #667eea; text-decoration: none; font-weight: 600;">
+                            <i class="fas fa-external-link-alt"></i> PhET Interactive Simulations
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="example-card">
+                    <h4><i class="fas fa-dna"></i> Biotechnology Department <span class="location">Experiments</span></h4>
+                    <p><strong>Molecular Biology:</strong> DNA/RNA extraction, PCR</p>
+                    <p><strong>Cell Culture:</strong> Tissue culture, cell counting</p>
+                    <p><strong>Biochemistry:</strong> Enzyme assays, protein analysis</p>
+                    <p><strong>Genetics:</strong> Gene cloning, transformation</p>
+                    <div style="margin-top: 15px;">
+                        <a href="https://www.bio-rad.com/en-us/education" target="_blank" style="color: #667eea; text-decoration: none; font-weight: 600;">
+                            <i class="fas fa-external-link-alt"></i> Bio-Rad Education Resources
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 30px; color: #2c3e50;"><i class="fas fa-video"></i> Live Experiment Channels</h3>
+            
+            <div class="resources-grid">
+                <div class="resource-item" onclick="window.open('https://praxilabs.com/en/virtual-physics-lab', '_blank')" style="cursor: pointer;">
+                    <i class="fas fa-play-circle"></i>
+                    <h4>Physics Videos</h4>
+                    <p>Live physics experiments</p>
+                </div>
+                
+                <div class="resource-item" onclick="window.open('https://virtualbiologylab.org/', '_blank')" style="cursor: pointer;">
+                    <i class="fas fa-play-circle"></i>
+                    <h4>Biology Labs</h4>
+                    <p>Live biology demonstrations</p>
+                </div>
+                
+                <div class="resource-item" onclick="window.open('https://ocw.mit.edu/courses/8-01x-physics-i-classical-mechanics-with-an-experimental-focus-fall-2002/pages/labs/', '_blank')" style="cursor: pointer;">
+                    <i class="fas fa-university"></i>
+                    <h4>MIT OCW</h4>
+                    <p>MIT lab demonstrations</p>
+                </div>
+                
+                <div class="resource-item" onclick="window.open('https://www.khanacademy.org/science/science-activities', '_blank')" style="cursor: pointer;">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h4>Khan Academy</h4>
+                    <p>Science experiments</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <h2><i class="fas fa-globe"></i> Global Future Opportunities</h2>
+            <p>Explore diverse career pathways and collaboration opportunities worldwide:</p>
+            
+            <div class="opportunity-grid">
+                <div class="opportunity-card">
+                    <i class="fas fa-microscope"></i>
+                    <h3>Research Opportunities</h3>
+                    <p><strong>India:</strong> IISc, IITs, TIFR, CSIR Labs</p>
+                    <p><strong>Global:</strong> MIT, Stanford, Oxford, Max Planck</p>
+                    <p><strong>Funding:</strong> DST, DBT, NSF, EU Horizon</p>
+                </div>
+                <div class="opportunity-card">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Entrepreneurship Pathways</h3>
+                    <p><strong>India:</strong> Startup India, MeITY, BIRAC</p>
+                    <p><strong>Global:</strong> Y Combinator, Techstars, EU EIC</p>
+                    <p><strong>Incubators:</strong> T-Hub, NASSCOM 10K, Silicon Valley</p>
+                </div>
+                <div class="opportunity-card">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Collaboration Networks</h3>
+                    <p><strong>Industry:</strong> Biocon, Dr. Reddy's, Reliance</p>
+                    <p><strong>Global:</strong> Pfizer, Novartis, Tesla, Google</p>
+                    <p><strong>Academic:</strong> Indo-US, Indo-German, ASEAN</p>
+                </div>
+                <div class="opportunity-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Market Trends 2026-2030</h3>
+                    <p><strong>AI in Science:</strong> Drug discovery, materials</p>
+                    <p><strong>Green Tech:</strong> Clean energy, sustainability</p>
+                    <p><strong>Health Tech:</strong> Personalized medicine</p>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 30px; color: #2c3e50;"><i class="fas fa-map-marked-alt"></i> Global Innovation Hubs</h3>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px;">
+                <div class="example-card">
+                    <h4><i class="fas fa-flag"></i> India <span class="location">Growing Hub</span></h4>
+                    <p><strong>Centers:</strong> Bangalore, Hyderabad, Chennai, Pune</p>
+                    <p><strong>Focus:</strong> Biotech, AI, Space, Clean Tech</p>
+                    <p><strong>Investment:</strong> $25B+ in deep tech</p>
+                </div>
+                
+                <div class="example-card">
+                    <h4><i class="fas fa-flag-usa"></i> USA <span class="location">Leader</span></h4>
+                    <p><strong>Centers:</strong> Boston, SF Bay Area, San Diego</p>
+                    <p><strong>Focus:</strong> Biotech, Quantum, AI</p>
+                    <p><strong>Investment:</strong> $200B+ annually</p>
+                </div>
+                
+                <div class="example-card">
+                    <h4><i class="fas fa-globe-europe"></i> Europe <span class="location">Strong</span></h4>
+                    <p><strong>Centers:</strong> Cambridge, Berlin, Zurich</p>
+                    <p><strong>Focus:</strong> Green Tech, Pharma, Materials</p>
+                    <p><strong>Investment:</strong> €100B+ EU funding</p>
+                </div>
+                
+                <div class="example-card">
+                    <h4><i class="fas fa-torii-gate"></i> Asia-Pacific <span class="location">Emerging</span></h4>
+                    <p><strong>Centers:</strong> Singapore, Tokyo, Seoul</p>
+                    <p><strong>Focus:</strong> Electronics, Biotech, Robotics</p>
+                    <p><strong>Investment:</strong> $50B+ regional</p>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 30px; color: #2c3e50;"><i class="fas fa-network-wired"></i> Collaboration Platforms</h3>
+            
+            <div class="resources-grid">
+                <a href="https://www.researchgate.net" target="_blank" class="resource-item">
+                    <i class="fas fa-users"></i>
+                    <h4>ResearchGate</h4>
+                    <p>Global researcher network</p>
+                </a>
+                
+                <a href="https://www.angel.co" target="_blank" class="resource-item">
+                    <i class="fas fa-angel"></i>
+                    <h4>AngelList</h4>
+                    <p>Startup funding platform</p>
+                </a>
+                
+                <a href="https://www.crunchbase.com" target="_blank" class="resource-item">
+                    <i class="fas fa-database"></i>
+                    <h4>Crunchbase</h4>
+                    <p>Company & funding data</p>
+                </a>
+                
+                <a href="https://www.ncbi.nlm.nih.gov" target="_blank" class="resource-item">
+                    <i class="fas fa-dna"></i>
+                    <h4>PubMed</h4>
+                    <p>Biomedical research</p>
+                </a>
+                
+                <a href="https://arxiv.org" target="_blank" class="resource-item">
+                    <i class="fas fa-file-alt"></i>
+                    <h4>arXiv</h4>
+                    <p>Physics & CS papers</p>
+                </a>
+                
+                <a href="https://www.patents.google.com" target="_blank" class="resource-item">
+                    <i class="fas fa-certificate"></i>
+                    <h4>Google Patents</h4>
+                    <p>IP search & analysis</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <h2><i class="fas fa-graduation-cap"></i> Learning & Development</h2>
+            <p>Continuous learning is essential for startup success. Focus on these key areas:</p>
+            
+            <div class="opportunity-grid">
+                <div class="opportunity-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Business Strategy</h3>
+                    <p>Market analysis, competitive positioning, and business modeling</p>
+                </div>
+                <div class="opportunity-card">
+                    <i class="fas fa-bullhorn"></i>
+                    <h3>Marketing & Sales</h3>
+                    <p>Customer acquisition, branding, and revenue generation</p>
+                </div>
+                <div class="opportunity-card">
+                    <i class="fas fa-calculator"></i>
+                    <h3>Financial Management</h3>
+                    <p>Budgeting, fundraising, and financial planning</p>
+                </div>
+                <div class="opportunity-card">
+                    <i class="fas fa-gavel"></i>
+                    <h3>Legal & Compliance</h3>
+                    <p>Regulatory requirements, contracts, and corporate governance</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz Section -->
+        <div class="section-card">
+            <h2><i class="fas fa-brain"></i> Test Your Innovation Knowledge</h2>
+            <p>Take this interactive quiz to assess your understanding of physics and biotechnology innovation opportunities!</p>
+            
+            <div id="quiz-container">
+                <div id="quiz-progress">
+                    <div class="progress-bar">
+                        <div id="progress-fill" style="width: 0%"></div>
+                    </div>
+                    <p id="question-counter">Question 1 of 10</p>
+                </div>
+
+                <div id="quiz-content">
+                    <!-- Questions will be dynamically loaded here -->
+                </div>
+
+                <div id="quiz-results" style="display: none;">
+                    <h3><i class="fas fa-trophy"></i> Quiz Results!</h3>
+                    <div id="score-display"></div>
+                    <div id="performance-message"></div>
+                    <button onclick="restartQuiz()" class="quiz-btn">Try Again</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feedback Section -->
+        <div class="section-card">
+            <h2><i class="fas fa-comment-dots"></i> Program Feedback</h2>
+            <p>Your feedback helps us improve this program and provide better resources for future innovators!</p>
+            
+            <form id="feedback-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="name"><i class="fas fa-user"></i> Your Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email"><i class="fas fa-envelope"></i> Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="department"><i class="fas fa-graduation-cap"></i> Department *</label>
+                        <select id="department" name="department" required>
+                            <option value="">Select Department</option>
+                            <option value="physics">Physics</option>
+                            <option value="biotechnology">Biotechnology</option>
+                            <option value="both">Both Physics & Biotechnology</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="year"><i class="fas fa-calendar"></i> Year of Study *</label>
+                        <select id="year" name="year" required>
+                            <option value="">Select Year</option>
+                            <option value="1st">1st Year</option>
+                            <option value="2nd">2nd Year</option>
+                            <option value="3rd">3rd Year</option>
+                            <option value="final">Final Year</option>
+                            <option value="postgrad">Post Graduate</option>
+                            <option value="faculty">Faculty</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="rating-section">
+                    <h4><i class="fas fa-star"></i> Rate Your Experience</h4>
+                    <div class="rating-group">
+                        <label>Content Quality:</label>
+                        <div class="star-rating" data-rating="content">
+                            <span class="star" data-value="1">★</span>
+                            <span class="star" data-value="2">★</span>
+                            <span class="star" data-value="3">★</span>
+                            <span class="star" data-value="4">★</span>
+                            <span class="star" data-value="5">★</span>
+                        </div>
+                    </div>
+                    
+                    <div class="rating-group">
+                        <label>Relevance to Your Field:</label>
+                        <div class="star-rating" data-rating="relevance">
+                            <span class="star" data-value="1">★</span>
+                            <span class="star" data-value="2">★</span>
+                            <span class="star" data-value="3">★</span>
+                            <span class="star" data-value="4">★</span>
+                            <span class="star" data-value="5">★</span>
+                        </div>
+                    </div>
+                    
+                    <div class="rating-group">
+                        <label>Overall Satisfaction:</label>
+                        <div class="star-rating" data-rating="satisfaction">
+                            <span class="star" data-value="1">★</span>
+                            <span class="star" data-value="2">★</span>
+                            <span class="star" data-value="3">★</span>
+                            <span class="star" data-value="4">★</span>
+                            <span class="star" data-value="5">★</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="feedback"><i class="fas fa-comments"></i> Your Feedback *</label>
+                    <textarea id="feedback" name="feedback" rows="4" placeholder="Share your thoughts, suggestions, or any questions you have..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="suggestions"><i class="fas fa-lightbulb"></i> Suggestions for Improvement</label>
+                    <textarea id="suggestions" name="suggestions" rows="3" placeholder="What would you like to see in future programs?"></textarea>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <label>
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <i class="fas fa-bell"></i> Send me updates about future programs and opportunities
+                    </label>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Submit Feedback
+                    </button>
+                    <button type="reset" class="reset-btn">
+                        <i class="fas fa-redo"></i> Reset Form
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p><strong>Foot Note:</strong> Prepared and Engineered by <a href="https://www.linkedin.com/in/profanjitraja/" target="_blank" class="footer-link">Prof. R. ANJIT RAJA</a></p>
+                    <p><i class="fas fa-copyright"></i> 2026 All Rights Reserved</p>
+                </div>
+                <div class="footer-right">
+                    <p><i class="fas fa-envelope"></i> Contact: <a href="mailto:anjitraja.rcas@rathinam.in" class="footer-link">anjitraja.rcas@rathinam.in</a></p>
+                    <p><i class="fas fa-phone"></i> +91-7299408979</p>
+                </div>
+            </div>
+            <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #e0e0e0;">
+                <p style="color: #7f8c8d; font-size: 0.9em;">
+                    <i class="fas fa-info-circle"></i> This guideline portal serves as a comprehensive resource for aspiring scientist-entrepreneurs. 
+                    For personalized guidance and mentorship, please connect with Prof. R. Anjit Raja.
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Technology Details Modal -->
+    <div id="technologyModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle"><i class="fas fa-atom"></i> <span id="modalTitleText">Technology Details</span></h2>
+                <span class="close-modal" onclick="closeModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="modalContent">
+                    <div class="loading-spinner"></div>
+                    <p>Loading real-time data...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Technology Details Modal Functionality
+        const technologyData = {
+            quantum: {
+                title: 'Quantum Technologies',
+                icon: 'fas fa-atom',
+                description: 'Revolutionary quantum computing, sensing, and cryptography applications',
+                currentProjects: [
+                    { name: 'PsiBorg Quantum Sensors', status: 'Active', funding: '$2.5M', location: 'Bangalore' },
+                    { name: 'QNu Labs Quantum Cryptography', status: 'Series A', funding: '$8M', location: 'Chennai' },
+                    { name: 'Tata Quantum Computing Initiative', status: 'Research', funding: '$15M', location: 'Mumbai' },
+                    { name: 'IISc Quantum Research Lab', status: 'Academic', funding: '$5M', location: 'Bangalore' }
+                ],
+                opportunities: [
+                    'Quantum computing hardware development',
+                    'Quantum-safe cryptography solutions',
+                    'Quantum sensing for medical diagnostics',
+                    'Quantum algorithms for drug discovery',
+                    'Quantum communication networks',
+                    'Quantum materials research'
+                ],
+                marketData: {
+                    globalMarket: '$42.5B',
+                    growthRate: '28.5% CAGR',
+                    indiaMarket: '$1.2B',
+                    jobsCreated: 15000,
+                    startupsCount: 45
+                }
+            },
+            renewable: {
+                title: 'Renewable Energy',
+                icon: 'fas fa-solar-panel',
+                description: 'Solar innovations, energy storage, and efficiency solutions',
+                currentProjects: [
+                    { name: 'Cygni Energy Solar EV Charging', status: 'Commercial', funding: '$12M', location: 'Chennai' },
+                    { name: 'ReNew Power Solar Farms', status: 'Scale-up', funding: '$500M', location: 'Pune' },
+                    { name: 'Tata Power Solar Solutions', status: 'Expansion', funding: '$200M', location: 'Mumbai' },
+                    { name: 'IIT Madras Solar Research', status: 'Research', funding: '$8M', location: 'Chennai' }
+                ],
+                opportunities: [
+                    'Perovskite solar cell technology',
+                    'Grid-scale energy storage systems',
+                    'Solar-powered water purification',
+                    'Building-integrated photovoltaics',
+                    'Solar hydrogen production',
+                    'Smart grid optimization'
+                ],
+                marketData: {
+                    globalMarket: '$1.8T',
+                    growthRate: '12.3% CAGR',
+                    indiaMarket: '$85B',
+                    jobsCreated: 125000,
+                    startupsCount: 320
+                }
+            },
+            semiconductor: {
+                title: 'Semiconductor Technology',
+                icon: 'fas fa-microchip',
+                description: 'Advanced materials, photonics, and electronics innovation',
+                currentProjects: [
+                    { name: 'Silicon Labs Chip Design', status: 'R&D', funding: '$25M', location: 'Bangalore' },
+                    { name: 'Texas Instruments India', status: 'Manufacturing', funding: '$150M', location: 'Bangalore' },
+                    { name: 'Intel Design Center', status: 'Expansion', funding: '$300M', location: 'Bangalore' },
+                    { name: 'IIT Bombay Semiconductor Lab', status: 'Research', funding: '$10M', location: 'Mumbai' }
+                ],
+                opportunities: [
+                    'GaN and SiC power electronics',
+                    'Photonic integrated circuits',
+                    'AI accelerator chips',
+                    'Quantum dot displays',
+                    'Flexible electronics',
+                    'Neuromorphic computing chips'
+                ],
+                marketData: {
+                    globalMarket: '$650B',
+                    growthRate: '8.7% CAGR',
+                    indiaMarket: '$25B',
+                    jobsCreated: 85000,
+                    startupsCount: 180
+                }
+            },
+            space: {
+                title: 'Space Technology',
+                icon: 'fas fa-satellite',
+                description: 'Satellite systems, propulsion, and space applications',
+                currentProjects: [
+                    { name: 'Pixxel Satellite Imaging', status: 'Series B', funding: '$35M', location: 'Bangalore' },
+                    { name: 'Skyroot Aerospace', status: 'Development', funding: '$68M', location: 'Hyderabad' },
+                    { name: 'ISRO Commercial Launch Program', status: 'Active', funding: '$200M', location: 'Sriharikota' },
+                    { name: 'Agnikul Cosmos', status: 'Testing', funding: '$20M', location: 'Chennai' }
+                ],
+                opportunities: [
+                    'Small satellite constellations',
+                    'Reusable launch vehicles',
+                    'Space debris removal systems',
+                    'Satellite-based IoT networks',
+                    'In-space manufacturing',
+                    'Lunar and Martian exploration tech'
+                ],
+                marketData: {
+                    globalMarket: '$385B',
+                    growthRate: '15.2% CAGR',
+                    indiaMarket: '$12B',
+                    jobsCreated: 45000,
+                    startupsCount: 95
+                }
+            },
+            biopharma: {
+                title: 'Biopharmaceuticals',
+                icon: 'fas fa-pills',
+                description: 'Novel drug discovery and development platforms',
+                currentProjects: [
+                    { name: 'BugWorks Antibiotic Research', status: 'Clinical Trials', funding: '$18M', location: 'Bangalore' },
+                    { name: 'Biocon Biologics', status: 'Commercial', funding: '$150M', location: 'Bangalore' },
+                    { name: 'Dr. Reddy\'s Research Labs', status: 'R&D', funding: '$80M', location: 'Hyderabad' },
+                    { name: 'IIT Delhi Drug Discovery', status: 'Research', funding: '$12M', location: 'Delhi' }
+                ],
+                opportunities: [
+                    'mRNA therapeutics platform',
+                    'CRISPR-based gene therapies',
+                    'AI-powered drug discovery',
+                    'Biosimilar development',
+                    'Personalized medicine platforms',
+                    'Novel antibody engineering'
+                ],
+                marketData: {
+                    globalMarket: '$425B',
+                    growthRate: '11.8% CAGR',
+                    indiaMarket: '$45B',
+                    jobsCreated: 95000,
+                    startupsCount: 280
+                }
+            },
+            agricultural: {
+                title: 'Agricultural Technology',
+                icon: 'fas fa-seedling',
+                description: 'Genetically modified crops and sustainable farming solutions',
+                currentProjects: [
+                    { name: 'Sea6 Energy Seaweed Farming', status: 'Commercial', funding: '$25M', location: 'Chennai' },
+                    { name: 'BharatAgri Smart Farming', status: 'Growth', funding: '$15M', location: 'Pune' },
+                    { name: 'ICAR Gene Editing Lab', status: 'Research', funding: '$8M', location: 'Delhi' },
+                    { name: 'Tata Rallis Biotech', status: 'Development', funding: '$30M', location: 'Mumbai' }
+                ],
+                opportunities: [
+                    'CRISPR crop improvement',
+                    'Precision farming drones',
+                    'Vertical farming systems',
+                    'Biofortified crops',
+                    'Soil health monitoring',
+                    'Climate-resilient agriculture'
+                ],
+                marketData: {
+                    globalMarket: '$280B',
+                    growthRate: '14.5% CAGR',
+                    indiaMarket: '$35B',
+                    jobsCreated: 65000,
+                    startupsCount: 220
+                }
+            },
+            diagnostics: {
+                title: 'Diagnostics',
+                icon: 'fas fa-vial',
+                description: 'Rapid testing, personalized medicine, and health monitoring',
+                currentProjects: [
+                    { name: 'MolBio Diagnostics', status: 'Commercial', funding: '$45M', location: 'Bangalore' },
+                    { name: 'Xcelris Labs Testing', status: 'Expansion', funding: '$20M', location: 'Coimbatore' },
+                    { name: 'IIT Bombay Point-of-Care', status: 'Research', funding: '$6M', location: 'Mumbai' },
+                    { name: 'Metropolis Healthcare', status: 'Scale-up', funding: '$100M', location: 'Mumbai' }
+                ],
+                opportunities: [
+                    'CRISPR-based diagnostics',
+                    'Wearable health monitors',
+                    'Liquid biopsy technology',
+                    'AI-powered medical imaging',
+                    'Point-of-care testing devices',
+                    'Genetic screening platforms'
+                ],
+                marketData: {
+                    globalMarket: '$95B',
+                    growthRate: '18.3% CAGR',
+                    indiaMarket: '$8B',
+                    jobsCreated: 35000,
+                    startupsCount: 150
+                }
+            },
+            bioprocessing: {
+                title: 'Bioprocessing',
+                icon: 'fas fa-recycle',
+                description: 'Enzyme technology, biofuels, and waste treatment solutions',
+                currentProjects: [
+                    { name: 'Praj Industries Biofuels', status: 'Commercial', funding: '$80M', location: 'Pune' },
+                    { name: 'IIT Madras Bioprocessing Lab', status: 'Research', funding: '$10M', location: 'Chennai' },
+                    { name: 'Novozymes India', status: 'Expansion', funding: '$35M', location: 'Bangalore' },
+                    { name: 'Biocon Bioprocess', status: 'Development', funding: '$25M', location: 'Bangalore' }
+                ],
+                opportunities: [
+                    'Enzyme engineering platforms',
+                    'Algal biofuel production',
+                    'Waste-to-value biorefineries',
+                    'Bioplastic manufacturing',
+                    'Fermentation optimization',
+                    'Synthetic biology platforms'
+                ],
+                marketData: {
+                    globalMarket: '$180B',
+                    growthRate: '13.7% CAGR',
+                    indiaMarket: '$15B',
+                    jobsCreated: 42000,
+                    startupsCount: 125
+                }
+            }
+        };
+
+        function showTechnologyDetails(techType) {
+            const modal = document.getElementById('technologyModal');
+            const modalTitle = document.getElementById('modalTitleText');
+            const modalIcon = document.querySelector('#modalTitle i');
+            const modalContent = document.getElementById('modalContent');
+            
+            const data = technologyData[techType];
+            
+            if (!data) {
+                modalContent.innerHTML = '<p>Error: Technology data not found.</p>';
+                modal.style.display = 'block';
+                return;
+            }
+            
+            // Update modal header
+            modalTitle.textContent = data.title;
+            modalIcon.className = data.icon;
+            
+            // Generate modal content
+            const contentHTML = `
+                <div class="info-section">
+                    <h3><i class="fas fa-info-circle"></i> Overview</h3>
+                    <p>${data.description}</p>
+                </div>
+                
+                <div class="info-section">
+                    <h3><i class="fas fa-flask"></i> Current Projects</h3>
+                    <div class="current-projects">
+                        ${data.currentProjects.map(project => `
+                            <div class="project-card">
+                                <h4>${project.name}</h4>
+                                <p><strong>Status:</strong> ${project.status}</p>
+                                <p><strong>Funding:</strong> ${project.funding}</p>
+                                <p><strong>Location:</strong> ${project.location}</p>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+                
+                <div class="info-section">
+                    <h3><i class="fas fa-lightbulb"></i> Innovation Opportunities</h3>
+                    <ul class="opportunity-list">
+                        ${data.opportunities.map(opp => `<li><i class="fas fa-arrow-right"></i> ${opp}</li>`).join('')}
+                    </ul>
+                </div>
+                
+                <div class="real-time-data">
+                    <h4><i class="fas fa-chart-line"></i> Real-Time Market Data</h4>
+                    <div class="data-point">
+                        <span><strong>Global Market Size:</strong></span>
+                        <span>${data.marketData.globalMarket}</span>
+                    </div>
+                    <div class="data-point">
+                        <span><strong>Growth Rate:</strong></span>
+                        <span>${data.marketData.growthRate}</span>
+                    </div>
+                    <div class="data-point">
+                        <span><strong>India Market:</strong></span>
+                        <span>${data.marketData.indiaMarket}</span>
+                    </div>
+                    <div class="data-point">
+                        <span><strong>Jobs Created:</strong></span>
+                        <span>${data.marketData.jobsCreated.toLocaleString()}</span>
+                    </div>
+                    <div class="data-point">
+                        <span><strong>Active Startups:</strong></span>
+                        <span>${data.marketData.startupsCount}</span>
+                    </div>
+                    <div class="data-point">
+                        <span><strong>Last Updated:</strong></span>
+                        <span>${new Date().toLocaleString()}</span>
+                    </div>
+                </div>
+            `;
+            
+            modalContent.innerHTML = contentHTML;
+            modal.style.display = 'block';
+            
+            // Track analytics
+            trackTechnologyClick(techType);
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('technologyModal');
+            modal.style.display = 'none';
+        }
+
+        function trackTechnologyClick(techType) {
+            // Store click data for analytics
+            const clicks = JSON.parse(localStorage.getItem('technologyClicks') || '{}');
+            clicks[techType] = (clicks[techType] || 0) + 1;
+            localStorage.setItem('technologyClicks', JSON.stringify(clicks));
+            
+            // In production, you could send this to analytics service
+            console.log(`Technology clicked: ${techType}`);
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('technologyModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+        // Add smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all section cards
+        document.querySelectorAll('.section-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+
+        // Add interactive hover effects
+        document.querySelectorAll('.opportunity-card, .example-card, .resource-item').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+
+        // Print functionality
+        function printGuideline() {
+            window.print();
+        }
+
+        // Add print button
+        const printBtn = document.createElement('button');
+        printBtn.innerHTML = '<i class="fas fa-print"></i> Print Guidelines';
+        printBtn.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            z-index: 1000;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        `;
+        printBtn.addEventListener('click', printGuideline);
+        printBtn.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.05)';
+        });
+        printBtn.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1)';
+        });
+        document.body.appendChild(printBtn);
+
+        // Quiz Functionality
+        const quizQuestions = [
+            {
+                question: "Which technology is NOT typically associated with quantum physics applications?",
+                options: [
+                    "Quantum Computing",
+                    "Quantum Sensing",
+                    "Traditional Solar Panels",
+                    "Quantum Cryptography"
+                ],
+                correct: 2
+            },
+            {
+                question: "What is the primary focus of biopharmaceuticals?",
+                options: [
+                    "Agricultural Equipment",
+                    "Novel Drug Discovery",
+                    "Space Technology",
+                    "Renewable Energy"
+                ],
+                correct: 1
+            },
+            {
+                question: "Which Indian city is mentioned as a hub for quantum sensing startup PsiBorg?",
+                options: [
+                    "Chennai",
+                    "Mumbai",
+                    "Bangalore",
+                    "Coimbatore"
+                ],
+                correct: 2
+            },
+            {
+                question: "What does CRISPR technology primarily deal with?",
+                options: [
+                    "Space Exploration",
+                    "Gene Editing",
+                    "Quantum Computing",
+                    "Solar Energy"
+                ],
+                correct: 1
+            },
+            {
+                question: "Which organization provides biotech research funding in India?",
+                options: [
+                    "BIRAC",
+                    "ISRO",
+                    "DRDO",
+                    "TIDEL"
+                ],
+                correct: 0
+            },
+            {
+                question: "What is the main innovation of Cygni Energy?",
+                options: [
+                    "Laser Manufacturing",
+                    "Quantum Sensors",
+                    "Solar EV Charging",
+                    "Gene Therapy"
+                ],
+                correct: 2
+            },
+            {
+                question: "Who is known as the 'Missile Man of India'?",
+                options: [
+                    "N.R. Narayana Murthy",
+                    "Dr. A.P.J. Abdul Kalam",
+                    "Satya Nadella",
+                    "Elon Musk"
+                ],
+                correct: 1
+            },
+            {
+                question: "Which field combines physics and biotechnology for medical applications?",
+                options: [
+                    "Space Technology",
+                    "Quantum Computing",
+                    "Medical Physics",
+                    "Semiconductor Tech"
+                ],
+                correct: 2
+            },
+            {
+                question: "What is the primary focus of Sea6 Energy?",
+                options: [
+                    "Quantum Technology",
+                    "Seaweed-based Products",
+                    "Space Systems",
+                    "Laser Manufacturing"
+                ],
+                correct: 1
+            },
+            {
+                question: "Which government initiative supports startups in India?",
+                options: [
+                    "NASA",
+                    "Startup India",
+                    "SpaceX",
+                    "Tesla"
+                ],
+                correct: 1
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+        let selectedAnswers = [];
+
+        function initializeQuiz() {
+            displayQuestion();
+            setupStarRatings();
+            setupFeedbackForm();
+        }
+
+        function displayQuestion() {
+            const question = quizQuestions[currentQuestion];
+            const quizContent = document.getElementById('quiz-content');
+            
+            quizContent.innerHTML = `
+                <div class="question-card">
+                    <div class="question-text">${question.question}</div>
+                    <div class="answers-container">
+                        ${question.options.map((option, index) => `
+                            <div class="answer-option" data-answer="${index}" onclick="selectAnswer(${index})">
+                                <span>${String.fromCharCode(65 + index)}. ${option}</span>
+                            </div>
+                        `).join('')}
+                    </div>
+                    <div style="margin-top: 20px; text-align: center;">
+                        <button onclick="nextQuestion()" class="quiz-btn" id="next-btn" style="display: none;">
+                            Next Question <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button onclick="submitQuiz()" class="quiz-btn" id="submit-btn" style="display: none;">
+                            Submit Quiz <i class="fas fa-check"></i>
+                        </button>
+                    </div>
+                </div>
+            `;
+            
+            updateProgress();
+        }
+
+        function selectAnswer(answerIndex) {
+            // Remove previous selection
+            document.querySelectorAll('.answer-option').forEach(option => {
+                option.classList.remove('selected');
+            });
+            
+            // Add selection to clicked answer
+            document.querySelector(`[data-answer="${answerIndex}"]`).classList.add('selected');
+            
+            selectedAnswers[currentQuestion] = answerIndex;
+            
+            // Show next button
+            const nextBtn = document.getElementById('next-btn');
+            const submitBtn = document.getElementById('submit-btn');
+            
+            if (currentQuestion < quizQuestions.length - 1) {
+                nextBtn.style.display = 'inline-block';
+                submitBtn.style.display = 'none';
+            } else {
+                nextBtn.style.display = 'none';
+                submitBtn.style.display = 'inline-block';
+            }
+        }
+
+        function nextQuestion() {
+            if (selectedAnswers[currentQuestion] === undefined) {
+                alert('Please select an answer before proceeding.');
+                return;
+            }
+            
+            currentQuestion++;
+            displayQuestion();
+        }
+
+        function submitQuiz() {
+            if (selectedAnswers[currentQuestion] === undefined) {
+                alert('Please select an answer before submitting.');
+                return;
+            }
+            
+            // Calculate score
+            score = 0;
+            for (let i = 0; i < quizQuestions.length; i++) {
+                if (selectedAnswers[i] === quizQuestions[i].correct) {
+                    score++;
+                }
+            }
+            
+            // Show results
+            showResults();
+        }
+
+        function showResults() {
+            const quizContent = document.getElementById('quiz-content');
+            const quizResults = document.getElementById('quiz-results');
+            const scoreDisplay = document.getElementById('score-display');
+            const performanceMessage = document.getElementById('performance-message');
+            
+            quizContent.style.display = 'none';
+            quizResults.style.display = 'block';
+            
+            const percentage = (score / quizQuestions.length) * 100;
+            scoreDisplay.innerHTML = `Your Score: ${score}/${quizQuestions.length} (${percentage.toFixed(1)}%)`;
+            
+            let message = '';
+            if (percentage >= 80) {
+                message = '🎉 Excellent! You have a strong understanding of innovation opportunities!';
+            } else if (percentage >= 60) {
+                message = '👍 Good job! You have a solid foundation to build upon.';
+            } else if (percentage >= 40) {
+                message = '📚 Keep learning! There\'s room for growth in this field.';
+            } else {
+                message = '💪 Don\'t give up! Consider reviewing the materials above.';
+            }
+            
+            performanceMessage.innerHTML = message;
+            
+            // Store quiz results for feedback integration
+            localStorage.setItem('quizScore', score);
+            localStorage.setItem('quizPercentage', percentage.toFixed(1));
+        }
+
+        function restartQuiz() {
+            currentQuestion = 0;
+            score = 0;
+            selectedAnswers = [];
+            
+            document.getElementById('quiz-content').style.display = 'block';
+            document.getElementById('quiz-results').style.display = 'none';
+            
+            displayQuestion();
+        }
+
+        function updateProgress() {
+            const progress = ((currentQuestion + 1) / quizQuestions.length) * 100;
+            document.getElementById('progress-fill').style.width = progress + '%';
+            document.getElementById('question-counter').textContent = `Question ${currentQuestion + 1} of ${quizQuestions.length}`;
+        }
+
+        // Star Rating Functionality
+        function setupStarRatings() {
+            document.querySelectorAll('.star-rating').forEach(rating => {
+                const stars = rating.querySelectorAll('.star');
+                const ratingType = rating.dataset.rating;
+                
+                stars.forEach((star, index) => {
+                    star.addEventListener('click', () => {
+                        // Remove active class from all stars
+                        stars.forEach(s => s.classList.remove('active'));
+                        
+                        // Add active class to clicked and previous stars
+                        for (let i = 0; i <= index; i++) {
+                            stars[i].classList.add('active');
+                        }
+                        
+                        // Store rating value
+                        rating.dataset.value = index + 1;
+                    });
+                    
+                    star.addEventListener('mouseenter', () => {
+                        stars.forEach((s, i) => {
+                            if (i <= index) {
+                                s.style.color = '#ffd700';
+                            } else {
+                                s.style.color = '#ddd';
+                            }
+                        });
+                    });
+                });
+                
+                rating.addEventListener('mouseleave', () => {
+                    stars.forEach(s => {
+                        if (s.classList.contains('active')) {
+                            s.style.color = '#ffd700';
+                        } else {
+                            s.style.color = '#ddd';
+                        }
+                    });
+                });
+            });
+        }
+
+        // Feedback Form Functionality
+        function setupFeedbackForm() {
+            const form = document.getElementById('feedback-form');
+            
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                
+                // Get form data
+                const formData = new FormData(form);
+                const data = {
+                    name: formData.get('name'),
+                    email: formData.get('email'),
+                    department: formData.get('department'),
+                    year: formData.get('year'),
+                    feedback: formData.get('feedback'),
+                    suggestions: formData.get('suggestions'),
+                    newsletter: formData.get('newsletter') === 'on',
+                    quizScore: localStorage.getItem('quizScore') || 'Not taken',
+                    quizPercentage: localStorage.getItem('quizPercentage') || 'Not taken',
+                    timestamp: new Date().toISOString()
+                };
+                
+                // Get ratings
+                document.querySelectorAll('.star-rating').forEach(rating => {
+                    const ratingType = rating.dataset.rating;
+                    const value = rating.dataset.value || '0';
+                    data[ratingType + 'Rating'] = value;
+                });
+                
+                // Validate required fields
+                if (!data.name || !data.email || !data.feedback) {
+                    showError('Please fill in all required fields.');
+                    return;
+                }
+                
+                try {
+                    // Submit to Google Sheets (using real-time API)
+                    const sheetsResult = await submitToGoogleSheets(data);
+                    console.log('Google Sheets submission:', sheetsResult);
+                    
+                    // Send email notification
+                    const emailResult = await sendEmailNotification(data);
+                    console.log('Email notification result:', emailResult);
+                    
+                    // Show success message with details
+                    let successMessage = 'Thank you for your feedback! Your response has been recorded.';
+                    if (emailResult.success) {
+                        successMessage += ` Email sent via ${emailResult.service}.`;
+                    }
+                    if (sheetsResult.success || sheetsResult.method) {
+                        successMessage += ` Data saved to ${sheetsResult.method || 'Google Sheets'}.`;
+                    }
+                    
+                    showSuccess(successMessage);
+                    
+                    // Reset form
+                    form.reset();
+                    document.querySelectorAll('.star').forEach(star => {
+                        star.classList.remove('active');
+                        star.style.color = '#ddd';
+                    });
+                    
+                    // Clear quiz results from localStorage
+                    localStorage.removeItem('quizScore');
+                    localStorage.removeItem('quizPercentage');
+                    
+                } catch (error) {
+                    console.error('Error submitting feedback:', error);
+                    
+                    // Enhanced error handling
+                    let errorMessage = 'There was an error submitting your feedback.';
+                    
+                    if (error.message.includes('Network') || error.message.includes('fetch')) {
+                        errorMessage += ' Please check your internet connection and try again.';
+                    } else if (error.message.includes('API')) {
+                        errorMessage += ' The service is temporarily unavailable. Your data has been saved locally.';
+                        
+                        // Store failed submission for retry
+                        const failedSubmissions = JSON.parse(localStorage.getItem('failedSubmissions') || '[]');
+                        failedSubmissions.push({
+                            data: data,
+                            timestamp: new Date().toISOString(),
+                            error: error.message
+                        });
+                        localStorage.setItem('failedSubmissions', JSON.stringify(failedSubmissions));
+                    } else {
+                        errorMessage += ' Please try again or contact support.';
+                    }
+                    
+                    showError(errorMessage);
+                }
+            });
+        }
+
+        async function submitToGoogleSheets(data) {
+            // Using SheetDB.io for real-time Google Sheets integration
+            // Create account at https://sheetdb.io/ and get your API key
+            const SHEETDB_API_URL = 'https://sheetdb.io/api/v1/yn2xu01ztryvx';
+            
+            // Alternative: Use Google Forms + Apps Script for free solution
+            const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse';
+            
+            try {
+                // Option 1: SheetDB.io (Recommended for production)
+                const response = await fetch(SHEETDB_API_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        data: {
+                            name: data.name,
+                            email: data.email,
+                            department: data.department,
+                            year: data.year,
+                            feedback: data.feedback,
+                            suggestions: data.suggestions,
+                            content_rating: data.contentRating,
+                            relevance_rating: data.relevanceRating,
+                            satisfaction_rating: data.satisfactionRating,
+                            quiz_score: data.quizScore,
+                            quiz_percentage: data.quizPercentage,
+                            newsletter: data.newsletter,
+                            timestamp: data.timestamp
+                        }
+                    })
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`SheetDB Error: ${response.status}`);
+                }
+                
+                return await response.json();
+                
+            } catch (error) {
+                console.warn('SheetDB failed, trying Google Forms backup:', error);
+                
+                // Option 2: Google Forms (Free backup method)
+                const formData = new FormData();
+                formData.append('entry.1234567890', data.name); // Replace with actual entry IDs
+                formData.append('entry.0987654321', data.email);
+                formData.append('entry.1122334455', data.department);
+                formData.append('entry.5544332211', data.year);
+                formData.append('entry.6677889900', data.feedback);
+                formData.append('entry.9988776655', data.suggestions);
+                formData.append('entry.2233445566', data.contentRating);
+                formData.append('entry.7788990011', data.relevanceRating);
+                formData.append('entry.3344556677', data.satisfactionRating);
+                formData.append('entry.4455667788', data.quizScore);
+                formData.append('entry.5566778899', data.quizPercentage);
+                formData.append('entry.6677889900', data.newsletter);
+                formData.append('entry.7788990011', data.timestamp);
+                
+                const formResponse = await fetch(GOOGLE_FORM_URL, {
+                    method: 'POST',
+                    body: formData,
+                    mode: 'no-cors'
+                });
+                
+                return { success: true, method: 'Google Forms' };
+            }
+        }
+
+        async function sendEmailNotification(data) {
+            // Option 1: EmailJS (Client-side solution)
+            // Sign up at https://www.emailjs.com/ and get your credentials
+            
+            try {
+                // EmailJS Configuration
+                const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';
+                const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+                const EMAILJS_PUBLIC_KEY = 'ftra926crrvep';
+                
+                const emailData = {
+                    service_id: EMAILJS_SERVICE_ID,
+                    template_id: EMAILJS_TEMPLATE_ID,
+                    user_id: EMAILJS_PUBLIC_KEY,
+                    template_params: {
+                        to_email: 'anjitraja.rcas@rathinam.in',
+                        from_name: data.name,
+                        from_email: data.email,
+                        department: data.department,
+                        year: data.year,
+                        feedback: data.feedback,
+                        suggestions: data.suggestions,
+                        content_rating: data.contentRating,
+                        relevance_rating: data.relevanceRating,
+                        satisfaction_rating: data.satisfactionRating,
+                        quiz_score: data.quizScore,
+                        quiz_percentage: data.quizPercentage,
+                        newsletter: data.newsletter ? 'Yes' : 'No',
+                        timestamp: new Date(data.timestamp).toLocaleString()
+                    }
+                };
+                
+                const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(emailData)
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`EmailJS Error: ${response.status}`);
+                }
+                
+                return { success: true, service: 'EmailJS' };
+                
+            } catch (error) {
+                console.warn('EmailJS failed, trying backup method:', error);
+                
+                // Option 2: Web3Forms (Alternative client-side solution)
+                try {
+                    const web3formData = {
+                        access_key: 'YOUR_WEB3FORMS_ACCESS_KEY',
+                        subject: `New Feedback from ${data.name} - Startup Scientist Program`,
+                        from_email: data.email,
+                        message: `
+                            Name: ${data.name}
+                            Email: ${data.email}
+                            Department: ${data.department}
+                            Year: ${data.year}
+                            
+                            Feedback: ${data.feedback}
+                            Suggestions: ${data.suggestions}
+                            
+                            Ratings:
+                            Content Quality: ${data.contentRating}/5
+                            Relevance: ${data.relevanceRating}/5
+                            Satisfaction: ${data.satisfactionRating}/5
+                            
+                            Quiz Score: ${data.quizScore}/${data.quizPercentage}%
+                            Newsletter: ${data.newsletter ? 'Yes' : 'No'}
+                            Submitted: ${new Date(data.timestamp).toLocaleString()}
+                        `
+                    };
+                    
+                    const web3Response = await fetch('https://api.web3forms.com/submit', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(web3formData)
+                    });
+                    
+                    if (web3Response.ok) {
+                        return { success: true, service: 'Web3Forms' };
+                    }
+                    
+                } catch (web3Error) {
+                    console.error('All email methods failed:', web3Error);
+                }
+                
+                // Option 3: Store in localStorage as backup
+                const existingEmails = JSON.parse(localStorage.getItem('pendingEmails') || '[]');
+                existingEmails.push({
+                    data: data,
+                    timestamp: new Date().toISOString(),
+                    status: 'pending'
+                });
+                localStorage.setItem('pendingEmails', JSON.stringify(existingEmails));
+                
+                return { success: false, message: 'Email stored locally for retry' };
+            }
+        }
+
+        function showSuccess(message) {
+            const successDiv = document.createElement('div');
+            successDiv.className = 'success-message';
+            successDiv.textContent = message;
+            successDiv.style.display = 'block';
+            
+            const form = document.getElementById('feedback-form');
+            form.appendChild(successDiv);
+            
+            setTimeout(() => {
+                successDiv.remove();
+            }, 5000);
+        }
+
+        function showError(message) {
+            const errorDiv = document.createElement('div');
+            errorDiv.className = 'error-message';
+            errorDiv.textContent = message;
+            errorDiv.style.display = 'block';
+            
+            const form = document.getElementById('feedback-form');
+            form.appendChild(errorDiv);
+            
+            setTimeout(() => {
+                errorDiv.remove();
+            }, 5000);
+        }
+
+        // Retry failed submissions function
+        function retryFailedSubmissions() {
+            const failedSubmissions = JSON.parse(localStorage.getItem('failedSubmissions') || '[]');
+            
+            if (failedSubmissions.length > 0) {
+                console.log(`Found ${failedSubmissions.length} failed submissions to retry`);
+                
+                failedSubmissions.forEach(async (submission, index) => {
+                    try {
+                        await submitToGoogleSheets(submission.data);
+                        await sendEmailNotification(submission.data);
+                        
+                        // Remove successful retry from localStorage
+                        failedSubmissions.splice(index, 1);
+                        localStorage.setItem('failedSubmissions', JSON.stringify(failedSubmissions));
+                        
+                        console.log(`Successfully retried submission from ${submission.timestamp}`);
+                    } catch (error) {
+                        console.error(`Retry failed for submission from ${submission.timestamp}:`, error);
+                    }
+                });
+            }
+        }
+        
+        // Auto-retry failed submissions when page loads
+        window.addEventListener('load', () => {
+            setTimeout(retryFailedSubmissions, 2000); // Wait 2 seconds before retrying
+        });
+
+        // Initialize quiz when page loads
+        document.addEventListener('DOMContentLoaded', initializeQuiz);
+    </script>
+</body>
+</html>

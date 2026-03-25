@@ -1,0 +1,27 @@
+{
+  "name": "startup-scientist-portal",
+  "version": "1.0.0",
+  "description": "A comprehensive web portal for physics and biotechnology students",
+  "main": "Startup_Scientist_Guideline_Portal.html",
+  "scripts": {
+    "start": "python -m http.server 8080",
+    "dev": "python -m http.server 8080"
+  },
+  "keywords": [
+    "education",
+    "physics",
+    "biotechnology",
+    "innovation",
+    "startup",
+    "science"
+  ],
+  "author": "Prof. R. Anjit Raja",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GarudaaResearch/The-Startup-Scientist.git"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
