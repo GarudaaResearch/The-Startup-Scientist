@@ -20,8 +20,5 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/GarudaaResearch/The-Startup-Scientist.git"
-  },
-  "engines": {
-    "node": ">=18.0.0"
   }
 }
